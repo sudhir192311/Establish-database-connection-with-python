@@ -14,4 +14,8 @@ result=cursor.fetchall()
 or result=cursor.fetchone()
 for i in result:
   print(i)
+insert="insert into user(snno,username,address) values(%d,%s,%s)"
+user=[(5,"rakesh","jajpur"),(6,"sambid","sambalpur"),(7,"ctc","bhg"),]
+cursor.executemany(insert,user)
+conn.commit()  
   
